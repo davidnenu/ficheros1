@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context="com.example.dm2.ficheros1.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contenido_a_escribir"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextContenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:hint="@string/escribe_algo"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/aniadirINT"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+ FICHERO INT."
+            android:onClick="aniadirINT"/>
+
+        <Button
+            android:id="@+id/aniadirEXT"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+ FICHERO EXT."
+            android:onClick="aniadirEXT"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/leerINT"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:text="LEER FICHERO INT."
+            android:onClick="leerINT"/>
+
+        <Button
+            android:id="@+id/leerEXT"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:text="LEER FICHERO EXT."
+            android:onClick="leerEXT"/>
+
+        <Button
+            android:id="@+id/leerREC"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:text="LEER RECURSO"
+            android:onClick="leerREC"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/borrarINT"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="BORRAR FICHERO INT."
+            android:onClick="borrarINT"/>
+
+        <Button
+            android:id="@+id/borrarEXT"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="BORRAR FICHERO EXT."
+            android:onClick="borrarEXT"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="El contenido del fichero es:"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textViewContenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:autoText="false"
+        android:textSize="12sp" />
+
+</LinearLayout>
